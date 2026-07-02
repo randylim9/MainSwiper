@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body {
-    background: url('img/bomb-cloud.jpeg') no-repeat center;
+    background: url('../img/bomb-cloud.jpeg') no-repeat center;
     background-size: cover;
     font-family: sans-serif;
   }
@@ -109,7 +109,7 @@
     right: 0;
     height: 0;
     z-index: 1;
-    background: url('img/bomb.png') no-repeat center;
+    background: url('../img/bomb.png') no-repeat center;
     background-size: cover;
     opacity: 0;
     transition: 0.6s;
