@@ -40,6 +40,15 @@ document.getElementById('size-btns').addEventListener('click', function(e) {
   render();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const logoutBtn = document.getElementById('logout');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+    }
+});
+
 boardEl.addEventListener('click', function(e) {
   if (winner || hitBomb) return;
   var clickedEl;
