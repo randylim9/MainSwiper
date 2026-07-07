@@ -1,7 +1,7 @@
 /*----- constants -----*/
-var bombImage = '<img src="images/bomb.png">';
-var flagImage = '<img src="images/flag.png">';
-var wrongBombImage = '<img src="images/wrong-bomb.png">'
+var bombImage = '<img src="../img_minesweeper/bomb.png">';
+var flagImage = '<img src="../img_minesweeper/flag.png">';
+var wrongBombImage = '<img src="../img_minesweeper/wrong-bomb.png">'
 var sizeLookup = {
   '9': {totalBombs: 10, tableWidth: '245px'},
   '16': {totalBombs: 40, tableWidth: '420px'},
@@ -96,9 +96,6 @@ function buildTable() {
     </td>
   <tr>
     <td class="menu" id="folder-bar" colspan="${size}">
-      <div id="folder1"><a href="https://github.com/nickarocho/minesweeper/blob/master/readme.md" target="blank">Read Me </a></div>
-      <div id="folder2"><a href="https://github.com/nickarocho/minesweeper" target="blank">Source Code</a></div>
-    </td>
   </tr>
   </tr>
     <tr>
