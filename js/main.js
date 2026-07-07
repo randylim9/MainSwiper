@@ -1,7 +1,7 @@
 /*----- constants -----*/
-var bombImage = '<img src="../img_minesweeper/bomb.png">';
-var flagImage = '<img src="../img_minesweeper/flag.png">';
-var wrongBombImage = '<img src="../img_minesweeper/wrong-bomb.png">'
+var bombImage = '<img src="img_minesweeper/bomb.png">';
+var flagImage = '<img src="img_minesweeper/flag.png">';
+var wrongBombImage = '<img src="img_minesweeper/wrong-bomb.png">'
 var sizeLookup = {
   '9': {totalBombs: 10, tableWidth: '245px'},
   '16': {totalBombs: 40, tableWidth: '420px'},
@@ -91,8 +91,8 @@ function buildTable() {
   var topRow = `
   <tr>
     <td class="menu" id="window-title-bar" colspan="${size}">
-      <div id="window-title"><img src="images/mine-menu-icon.png"> Minesweeper</div>
-      <div id="window-controls"><img src="images/window-controls.png"></div>
+      <div id="window-title"><img src="img_minesweeper/mine-menu-icon.png"> Minesweeper</div>
+      <div id="window-controls"><img src="img_minesweeper/window-controls.png"></div>
     </td>
   <tr>
     <td class="menu" id="folder-bar" colspan="${size}">
@@ -102,7 +102,7 @@ function buildTable() {
       <td class="menu" colspan="${size}">
           <section id="status-bar">
             <div id="bomb-counter">000</div>
-            <div id="reset"><img src="images/smiley-face.png"></div>
+            <div id="reset"><img src="img_minesweeper/smiley-face.png"></div>
             <div id="timer">000</div>
           </section>
       </td>
@@ -208,7 +208,7 @@ function render() {
     }
   });
   if (hitBomb) {
-    document.getElementById('reset').innerHTML = '<img src=images/dead-face.png>';
+    document.getElementById('reset').innerHTML = '<img src=img_minesweeper/dead-face.png>';
     runCodeForAllCells(function(cell) {
       if (!cell.bomb && cell.flagged) {
         var td = document.querySelector(`[data-row="${cell.row}"][data-col="${cell.col}"]`);
@@ -216,7 +216,7 @@ function render() {
       }
     });
   } else if (winner) {
-    document.getElementById('reset').innerHTML = '<img src=images/cool-face.png>';
+    document.getElementById('reset').innerHTML = '<img src=img_minesweeper/cool-face.png>';
     clearInterval(timerId);
   }
 };
